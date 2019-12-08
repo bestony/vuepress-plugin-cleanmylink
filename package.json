@@ -1,12 +1,12 @@
 {
   "name": "vuepress-plugin-404found",
   "version": "1.0.0",
-  "description": "",
+  "description": "A plugin to export all 404 link",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Bestony",
+  "license": "GPL-3.0-or-later"
 }
