@@ -1,5 +1,6 @@
 # Vuepress-Plugin-cleanmylink
 ![](https://github.com/bestony/vuepress-plugin-cleanmylink/workflows/Node%20CI/badge.svg) ![](https://github.com/bestony/vuepress-plugin-cleanmylink/workflows/Node.js%20Package/badge.svg)
+
 一个用于检查 Vuepress 下所有的 Hyperlink ，返回所有的非 200 的链接
 
 ## 用法
