@@ -40,6 +40,8 @@ module.exports = (options, ctx) => {
          * 提取所有的 URL
          * 
          * @TODO 由于 Plugin 中拿不到渲染后的 HTML，所以自行渲染一次，可能是因为用错了生命周期。
+         * 
+         * @note 这里为 getUrls 添加了 Object 参数，原因是 getUrls 默认会加入 stripWWW，导致 www.cnblogs.com 这样的 URL 被损坏。
          */
         let linksToCheck = getUrls(md.render(page._strippedContent),{normalizeProtocol: false,stripWWW:false});
         linksToCheck.forEach(async (item)=>{
