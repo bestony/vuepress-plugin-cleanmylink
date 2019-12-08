@@ -1,6 +1,9 @@
 const getUrls = require("get-urls");
 const got = require('got');
 const fs = require('fs');
+var MarkdownIt = require('markdown-it'),
+md = new MarkdownIt();
+
 
 /**
  * 检测 URL 可用性
@@ -36,8 +39,10 @@ module.exports = (options, ctx) => {
         let relativePath = page.relativePath;
         /**
          * 提取所有的 URL
+         * 
+         * @TODO 由于 Plugin 中拿不到渲染后的 HTML，所以自行渲染一次，可能是因为用错了生命周期
          */
-        let linksToCheck = getUrls(page._strippedContent);
+        let linksToCheck = getUrls(md.render(page._strippedContent));
         linksToCheck.forEach(async (item)=>{
            /**
             * 检测与输出放在一起
