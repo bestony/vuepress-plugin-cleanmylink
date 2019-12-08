@@ -1,8 +1,8 @@
 const getUrls = require("get-urls");
 const got = require('got');
 const fs = require('fs');
-var MarkdownIt = require('markdown-it'),
-md = new MarkdownIt();
+const MarkdownIt = require('markdown-it');
+let md = new MarkdownIt();
 
 
 /**
@@ -11,14 +11,13 @@ md = new MarkdownIt();
  * Note: 这里原本打算使用 status-is-ok 这个 package，后续 review 库的代码时发现，其使用的是 get， 而不是 head，所以决定自己来做。
  */
 async function isValid(url,validateState = [200,201]){
-
    return await got.head(url).then(res => {
       if(validateState.indexOf(res.statusCode) != -1){
          return true
       }else{
          return false;
       }
-   }).catch(() => {
+   }).catch((error) => {
       return false;
    })
 
@@ -40,9 +39,9 @@ module.exports = (options, ctx) => {
         /**
          * 提取所有的 URL
          * 
-         * @TODO 由于 Plugin 中拿不到渲染后的 HTML，所以自行渲染一次，可能是因为用错了生命周期
+         * @TODO 由于 Plugin 中拿不到渲染后的 HTML，所以自行渲染一次，可能是因为用错了生命周期。
          */
-        let linksToCheck = getUrls(md.render(page._strippedContent));
+        let linksToCheck = getUrls(md.render(page._strippedContent),{normalizeProtocol: false,stripWWW:false});
         linksToCheck.forEach(async (item)=>{
            /**
             * 检测与输出放在一起

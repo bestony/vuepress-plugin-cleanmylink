@@ -4,7 +4,7 @@
   "description": "A plugin to export all 404 link",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "Bestony",
@@ -12,6 +12,7 @@
   "dependencies": {
     "get-urls": "^9.2.0",
     "got": "10.0.2",
-    "markdown-it": "^10.0.0"
+    "markdown-it": "^10.0.0",
+    "mocha": "^6.2.2"
   }
 }
