@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-404found",
+  "name": "vuepress-plugin-cleanmylink",
   "version": "1.0.0",
   "description": "A plugin to export all 404 link",
   "main": "src/index.js",

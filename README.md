@@ -1,10 +1,10 @@
-# Vuepress-Plugin-404Found
-![](https://github.com/bestony/vuepress-plugin-404found/workflows/Node%20CI/badge.svg) ![](https://github.com/bestony/vuepress-plugin-404found/workflows/Node.js%20Package/badge.svg)
+# Vuepress-Plugin-cleanmylink
+![](https://github.com/bestony/vuepress-plugin-cleanmylink/workflows/Node%20CI/badge.svg) ![](https://github.com/bestony/vuepress-plugin-cleanmylink/workflows/Node.js%20Package/badge.svg)
 一个用于检查 Vuepress 下所有的 Hyperlink ，返回所有的非 200 的链接
 
 ## 用法
 
-1. 使用 `npm install --save vuepress-plugin-404found` 安装插件
+1. 使用 `npm install --save vuepress-plugin-cleanmylink` 安装插件
 2. 在 `.vuepress/config.js` 的 plugins 配置项目中加入插件配置，具体如下
 
 ```javascript
