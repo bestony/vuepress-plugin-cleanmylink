@@ -6,7 +6,11 @@
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "vuepress",
+    "vuepress-plugin",
+    "cleanmylink"
+  ],
   "author": "Bestony",
   "license": "GPL-3.0-or-later",
   "dependencies": {
@@ -14,5 +18,13 @@
     "got": "10.0.2",
     "markdown-it": "^10.0.0",
     "mocha": "^6.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bestony/vuepress-plugin-cleanmylink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bestony/vuepress-plugin-cleanmylink/issues"
+  },
+  "homepage": "https://github.com/bestony/vuepress-plugin-cleanmylink#readme"
 }
