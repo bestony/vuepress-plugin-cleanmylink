@@ -10,7 +10,7 @@
 ```javascript
 module.exports = {
   plugins: [
-    ['vuepress-plugin-404found',{
+    ['vuepress-plugin-cleanmylink',{
     	allowState: [200,201,301,302,405],
     	fileName: 'link-with-error.txt',
     }]
